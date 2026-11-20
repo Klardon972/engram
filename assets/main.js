@@ -1,16 +1,9 @@
 /* Engram site — particle brain, terminal, reveals, lightbox */
 (() => {
-  const REPO = 'engram'; // repo name under the user's account; used for release links
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- release + repo links (derived from the Pages URL) ---------- */
-  const host = location.hostname;
-  const owner = host.endsWith('.github.io') ? host.split('.')[0] : null;
-  const repoUrl = owner ? `https://github.com/${owner}/${REPO}` : '#';
-  document.querySelectorAll('[data-repo]').forEach(a => (a.href = repoUrl));
-  document.querySelectorAll('[data-release]').forEach(a => {
-    a.href = owner ? `${repoUrl}/releases/latest/download/${a.dataset.release}` : `${repoUrl}`;
-  });
+  /* ---------- repo links ---------- */
+  document.querySelectorAll('[data-repo]').forEach(a => (a.href = 'https://github.com/Klardon972/engram'));
 
   /* ---------- nav background on scroll ---------- */
   const nav = document.getElementById('nav');
