@@ -299,6 +299,7 @@ button.zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: -2
 
 /* lightbox (modal: centered origin) */
 .lightbox { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 4vw; background: rgba(4,5,7,.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); cursor: zoom-out; opacity: 1; transition: opacity 220ms var(--ease-out); }
+.lightbox[hidden] { display: none; }
 .lightbox img { max-height: 90vh; border-radius: 12px; border: 1px solid var(--line-2); box-shadow: 0 40px 120px rgba(0,0,0,.8); transition: transform 260ms var(--ease-out); }
 .lightbox.closing { opacity: 0; transition-duration: 160ms; }
 .lightbox.closing img { transform: scale(.97); }
