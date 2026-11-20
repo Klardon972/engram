@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engram — a local-first second brain</title>
+<meta name="description" content="Engram stores your notes, projects and AI conversations in a local database, renders them as a living 3D brain, and serves them to AI agents over MCP.">
+<meta property="og:title" content="Engram — a local-first second brain">
+<meta property="og:description" content="Every glowing point is a real entry. Local, private, with an MCP memory for Claude, Cursor and Codex.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" href="assets/icon.png">
+<link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Engram home"><img src="assets/icon.png" alt="" width="24" height="24"><span>Engram</span></a>
+  <nav aria-label="Sections">
+    <a href="#worlds">Worlds</a>
+    <a href="#regions">Regions</a>
+    <a href="#features">Features</a>
+    <a href="#agents">Agents</a>
+    <a href="#privacy">Privacy</a>
+  </nav>
+  <a class="btn btn-ghost btn-s" href="#download">Download</a>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <canvas id="brain" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <div class="hero-copy">
+    <p class="meta"><span class="pulse"></span>Version 1.4.1 · Windows · MIT</p>
+    <h1>Your second brain,<br><em>made visible.</em></h1>
+    <p class="lead">Engram keeps your notes, projects and AI conversations in a local database and draws them as a 3D brain. Every glowing point is a real entry you can open.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#download">Download for Windows</a>
+      <a class="btn btn-ghost" href="#worlds">See how it works</a>
+    </div>
+  </div>
+
+  <dl class="hero-stats">
+    <div><dt>Particles, up to</dt><dd>140,000</dd></div>
+    <div><dt>Brain regions</dt><dd>9</dd></div>
+    <div><dt>MCP tools</dt><dd>25</dd></div>
+    <div><dt>Servers</dt><dd>0</dd></div>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" aria-label="Import sources">
+  <p class="meta center">Imports conversations and notes from</p>
+  <div class="marquee">
+    <div class="track">
+      <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Claude Code</span><span>Codex</span><span>Obsidian</span><span>Notion</span><span>Evernote</span><span>Google Keep</span><span>WhatsApp</span><span>Telegram</span><span>Slack</span><span>Discord</span><span>Kindle</span><span>Readwise</span><span>Perplexity</span>
+    </div>
+    <div class="track" aria-hidden="true">
+      <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Claude Code</span><span>Codex</span><span>Obsidian</span><span>Notion</span><span>Evernote</span><span>Google Keep</span><span>WhatsApp</span><span>Telegram</span><span>Slack</span><span>Discord</span><span>Kindle</span><span>Readwise</span><span>Perplexity</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORLDS ============ -->
+<section id="worlds" class="section">
+  <header class="section-head" data-reveal>
+    <p class="meta">01 — Two worlds</p>
+    <h2>One memory.<br>Two ways to <em>walk through it.</em></h2>
+  </header>
+
+  <article class="world" data-reveal>
+    <figure class="shot">
+      <img src="assets/shots/brain.jpg" alt="Engram's brain view: an anatomical particle brain with glowing regions" loading="lazy" width="1400" height="877">
+    </figure>
+    <div class="world-copy">
+      <p class="meta">The brain</p>
+      <h3>An anatomical brain, built from your entries.</h3>
+      <p>Up to 140,000 particles sit on a signed-distance-field brain: two hemispheres, the Sylvian and central sulci, folded gyri, a cerebellum with fine folia, the brainstem and spinal cord. No lines, only light and shadow.</p>
+      <ul class="list">
+        <li>Each entry is placed in one of 9 regions automatically</li>
+        <li>Click a point to open the entry</li>
+        <li>Double-click a region to fly to it</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="world flip" data-reveal>
+    <figure class="shot">
+      <img src="assets/shots/universe.jpg" alt="Engram's universe view with a black hole at the centre and nine galaxies" loading="lazy" width="1400" height="877">
+    </figure>
+    <div class="world-copy">
+      <p class="meta">The universe</p>
+      <h3>A black hole at the centre of everything you know.</h3>
+      <p>A Schwarzschild black hole is raymarched in real time. Light bends along null geodesics, producing the shadow, the photon ring and the lensed far side of the accretion disk.</p>
+      <dl class="map">
+        <div><dt>Galaxies</dt><dd>9 knowledge areas</dd></div>
+        <div><dt>Solar systems</dt><dd>Projects</dd></div>
+        <div><dt>Planets</dt><dd>Topic clusters</dd></div>
+        <div><dt>Stars</dt><dd>Single entries</dd></div>
+      </dl>
+      <p class="quiet">Imports arrive as comets. Analyses pulse out of the black hole. New links travel as sparks. Every event shown is a real one.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ REGIONS ============ -->
+<section id="regions" class="section">
+  <header class="section-head" data-reveal>
+    <p class="meta">02 — Nine regions</p>
+    <h2>Everything finds <em>its place.</em></h2>
+    <p class="lead">Engram assigns each entry to a region by its kind, source, origin, folder, tags and keywords. You never sort anything by hand.</p>
+  </header>
+
+  <ol class="regions" data-reveal-group>
+    <li style="--c:#9fc6ff"><span class="n">01</span><h4>Knowledge</h4><p>Parietal &amp; temporal cortex</p><small>Memories, notes, documents</small></li>
+    <li style="--c:#a7e3c4"><span class="n">02</span><h4>Perception</h4><p>Visual cortex</p><small>Research, sources, highlights</small></li>
+    <li style="--c:#f2b3cf"><span class="n">03</span><h4>Personality</h4><p>Orbitofrontal cortex</p><small>People, values, goals</small></li>
+    <li style="--c:#8fd8e8"><span class="n">04</span><h4>Communication</h4><p>Language centres</p><small>ChatGPT, Claude, Gemini, mail</small></li>
+    <li style="--c:#e9c48a"><span class="n">05</span><h4>Structure</h4><p>Brainstem</p><small>Projects, templates, overviews</small></li>
+    <li style="--c:#d7b4f0"><span class="n">06</span><h4>Action</h4><p>Motor cortex</p><small>Tasks, ideas, coding sessions</small></li>
+    <li style="--c:#f0a08c"><span class="n">07</span><h4>Reasoning</h4><p>Prefrontal cortex</p><small>AI analyses, decisions</small></li>
+    <li style="--c:#9eb0ff"><span class="n">08</span><h4>Foundations</h4><p>Cerebellum</p><small>Daily notes, routines, habits</small></li>
+    <li style="--c:#f3dd9a"><span class="n">09</span><h4>Automation</h4><p>Somatosensory cortex</p><small>Memories saved by agents</small></li>
+  </ol>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="section">
+  <header class="section-head" data-reveal>
+    <p class="meta">03 — Features</p>
+    <h2>Built to <em>remember</em> for you.</h2>
+  </header>
+
+  <div class="bento" data-reveal-group>
+    <article class="card wide">
+      <div class="card-copy">
+        <p class="meta">Overview</p>
+        <h3>Your whole record on one screen.</h3>
+        <p>A live world, recent entries, active projects and a command bar on <kbd>Ctrl</kbd> <kbd>K</kbd> for search and questions.</p>
+      </div>
+      <img src="assets/shots/dashboard.jpg" alt="Engram overview dashboard" loading="lazy" width="1400" height="877">
+    </article>
+
+    <article class="card">
+      <div class="card-copy">
+        <p class="meta">Notes</p>
+        <h3>A full Markdown vault.</h3>
+        <p>Live preview, <code>[[wikilinks]]</code>, backlinks, tabs, split view, templates and daily notes. An optional mirror folder keeps every note as a plain <code>.md</code> file.</p>
+      </div>
+      <img src="assets/shots/notes.jpg" alt="Engram notes editor" loading="lazy" width="1400" height="877">
+    </article>
+
+    <article class="card">
+      <div class="card-copy">
+        <p class="meta">Import</p>
+        <h3>Everything comes in verbatim.</h3>
+        <p>ChatGPT, Claude, Gemini, Claude Code, Codex, Obsidian, Notion, Evernote and more. Importing the same file twice creates no duplicates.</p>
+      </div>
+      <img src="assets/shots/conversations.jpg" alt="Engram conversations list" loading="lazy" width="1400" height="877">
+    </article>
+
+    <article class="card">
+      <div class="card-copy">
+        <p class="meta">Search &amp; ask</p>
+        <h3>Ask in plain language.</h3>
+        <p>Full-text and vector search combined. Filters such as “decisions from October” or “ChatGPT, last 3 months” are read from your question. Answers cite the entries they came from.</p>
+      </div>
+      <img src="assets/shots/search.jpg" alt="Engram search results in the command bar" loading="lazy" width="1400" height="877">
+    </article>
+
+    <article class="card">
+      <div class="card-copy">
+        <p class="meta">Graph &amp; timeline</p>
+        <h3>Watch ideas grow.</h3>
+        <p>A knowledge graph of real links, a timeline with topic waves, and a version history for every change.</p>
+      </div>
+      <img src="assets/shots/timeline.jpg" alt="Engram timeline view" loading="lazy" width="1400" height="877">
+    </article>
+  </div>
+
+  <ul class="specs" data-reveal-group>
+    <li><i style="--c:#a9d4ff"></i><h4>Analysis, with or without AI</h4><p>Summaries, topics, ideas, decisions and duplicates. Use OpenAI, Anthropic, Gemini, or Ollama on your own machine.</p></li>
+    <li><i style="--c:#8fe0b0"></i><h4>Originals stay untouched</h4><p>AI output lives in its own table and is marked “AI-derived”, linked back to the source it came from.</p></li>
+    <li><i style="--c:#f0c27a"></i><h4>Browser extension</h4><p>Saves your ChatGPT, Claude and Gemini chats as you type, and adds relevant memories to your prompt on <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>E</kbd>.</p></li>
+    <li><i style="--c:#d7b4f0"></i><h4>Three themes, five palettes</h4><p>Midnight, Graphite and Paper, two density levels, a global hotkey, tray icon and lock screen.</p></li>
+  </ul>
+</section>
+
+<!-- ============ AGENTS ============ -->
+<section id="agents" class="section">
+  <div class="agents">
+    <div class="agents-copy" data-reveal>
+      <p class="meta">04 — Agent memory</p>
+      <h2>Your AI <em>remembers</em> what you decided.</h2>
+      <p class="lead">Engram is also an MCP server. Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex read and write the same memory. Setup is one click per agent.</p>
+      <ul class="list">
+        <li>25 tools, including <code>search_memory</code>, <code>ask_memory</code> and <code>get_project_context</code></li>
+        <li>stdio and Streamable HTTP, bound to 127.0.0.1 with a bearer token</li>
+        <li>Per-tool permissions. Deleting is off by default, and every call is logged</li>
+      </ul>
+    </div>
+
+    <div class="terminal" data-reveal role="img" aria-label="Example: an agent calls get_project_context and receives the current project's decisions">
+      <div class="term-bar"><i></i><i></i><i></i><span>claude · engram</span></div>
+      <pre id="term"></pre>
+    </div>
+  </div>
+
+  <figure class="shot wide" data-reveal>
+    <img src="assets/shots/agents.jpg" alt="Engram's AI agents page with one-click install for each client" loading="lazy" width="1400" height="877">
+  </figure>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section id="privacy" class="section">
+  <header class="section-head" data-reveal>
+    <p class="meta">05 — Privacy</p>
+    <h2>It stays <em>on your machine.</em></h2>
+  </header>
+  <div class="privacy" data-reveal-group>
+    <div><span class="big">0</span><h4>Accounts, servers, telemetry</h4><p>Network access happens only for an AI provider you choose, OpenTimestamps, and your sync folder.</p></div>
+    <div><span class="big">AES-256</span><h4>End-to-end encrypted sync</h4><p>Sync through any cloud folder. The key comes from your passphrase or 24 recovery words.</p></div>
+    <div><span class="big">SHA-256</span><h4>Proof of existence</h4><p>A digest of your record goes to four OpenTimestamps calendars. Only the hash leaves your computer.</p></div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section id="download" class="section download">
+  <div class="dl-glow" aria-hidden="true"></div>
+  <div data-reveal>
+    <p class="meta">06 — Get started</p>
+    <h2>Start with what you <em>already have.</em></h2>
+    <p class="lead">Install per user, no admin rights needed. Your data stays in <code>%APPDATA%\Engram</code>, even if you uninstall.</p>
+    <div class="cta center">
+      <a class="btn btn-primary" data-release="Engram-Setup-1.4.1.exe" href="#">Download installer</a>
+      <a class="btn btn-ghost" data-release="Engram-1.4.1-portable.exe" href="#">Portable version</a>
+    </div>
+    <p class="note">The build is not code-signed. If Windows SmartScreen appears, choose <b>More info → Run anyway</b>.</p>
+    <div class="build">
+      <span class="meta">Build from source</span>
+      <pre><code>npm install
+npm start</code></pre>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="20" height="20"><span>Engram</span></a>
+  <p class="meta">Local-first · MIT · Electron, Three.js &amp; SQLite</p>
+  <a class="meta link" data-repo href="#">Source on GitHub ↗</a>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" tabindex="-1" hidden><img alt=""></div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
