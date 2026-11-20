@@ -24,16 +24,23 @@
   document.querySelectorAll('[data-reveal],[data-reveal-group]').forEach(el => io.observe(el));
 
   /* ---------- lightbox ---------- */
-  const lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img');
+  let lb = null, lbImg = null;
+  const ensureLb = () => {
+    if (lb) return;
+    lb = document.createElement('div');
+    lb.className = 'lightbox'; lb.id = 'lightbox'; lb.tabIndex = -1;
+    lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Screenshot');
+    lbImg = document.createElement('img'); lb.append(lbImg);
+    lb.addEventListener('click', close);
+  };
   let opener = null;
   document.querySelectorAll('.shot img, .card img').forEach(img => {
     const b = document.createElement('button');
     b.className = 'zoom'; b.type = 'button'; b.setAttribute('aria-label', 'Enlarge screenshot: ' + img.alt);
     img.replaceWith(b); b.append(img);
-    b.addEventListener('click', () => { opener = b; lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.remove('closing'); lb.hidden = false; lb.focus(); });
+    b.addEventListener('click', () => { ensureLb(); document.body.append(lb); opener = b; lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.remove('closing'); lb.focus(); });
   });
-  const close = () => { if (lb.hidden) return; lb.classList.add('closing'); setTimeout(() => { lb.hidden = true; opener && opener.focus(); }, 160); };
-  lb.addEventListener('click', close);
+  function close() { if (!lb || !lb.isConnected) return; lb.classList.add('closing'); setTimeout(() => { lb.remove(); opener && opener.focus(); }, 160); }
   addEventListener('keydown', e => e.key === 'Escape' && close());
 
   /* ---------- terminal ---------- */
